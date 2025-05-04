@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+    
+</head>
+<body>
+    <div class="holder">
+        <div class="tab">
+            <a class="tab-login active" onclick="showTab('login')">Login</a>
+            <a class="tab-signin" onclick="showTab('signup')">Sign Up</a>
+        </div>
+        <div class="login active" id="login">
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="usern">Username
+                    <input type="text" id="username" required>
+                    <span class="error" id="username-error">Username is required</span>
+                </label>
+                <label for="pass">Password
+                    <input type="password" id="password_one" required>
+                    <span class="error" id="password_one-error">Password is required</span>
+                </label>
+                <div class="show-pass">
+                    <input type="checkbox" id="show-pass" onclick="togglePassword('password_one')">
+                    <label for="show-pass">Show Password</label>
+                </div>
+                <hr>
+                <span>Forgot password? <a href="#">Click here.</a></span>
+                <button type="button" onclick="LogIn()">Log In</button>
+            </form>
+        </div>
+        <div class="signup" id="signup">
+            <h1>Sign Up</h1>
+            <form id="signup-form">
+                <label for="name">Name
+                    <input type="text" id="name" required>
+                    <span class="error" id="name-error">Name is required</span>
+                </label>
+                <label for="sname">Surname
+                    <input type="text" id="surname" required>
+                    <span class="error" id="surname-error">Surname is required</span>
+                </label>
+                <label for="email">Email
+                    <input type="email" id="email" required>
+                    <span class="error" id="email-error">Valid email is required</span>
+                </label>
+                <label for="passw">Password
+                    <input type="password" id="password" required>
+                    <span class="error" id="password-error">Password is required</span>
+                </label>
+                <label for="cpassw">Confirm Password
+                    <input type="password" id="c_password" required>
+                    <span class="error" id="c_password-error">Passwords do not match</span>
+                </label>
+                <button type="button" onclick="signUp()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

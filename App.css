@@ -1,0 +1,196 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the form on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Main container */
+.holder {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Tabs for switching between Login and Sign Up */
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+/* Styling tab buttons */
+.tab button {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.tab button:hover,
+.tab button.active {
+    background: #696969;
+    color: #fff;
+    border-radius: 40px;
+}
+
+/* Login & Signup section */
+.login,
+.signup {
+    padding: 20px;
+    display: none;
+}
+
+/* Show active tab content */
+.login.active,
+.signup.active {
+    display: block;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Form structure */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for inputs */
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Password visibility toggle */
+.show-pass {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Link styles */
+span {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+span a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Divider */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Error message styling */
+.error {
+    color: #d32f2f;
+    font-size: 12px;
+    margin-top: -10px;
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .holder {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .tab button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
